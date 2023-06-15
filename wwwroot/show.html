@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href=”~/lib/datatables/css/dataTables.bootstrap4.min.css” rel=”stylesheet” />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- <script src="Script.js"></script> -->
+
+    <script src="lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="lib/datatables/js/userTable.js"></script>
+
+    <style>
+        label{color:black;font-weight:bold}
+    </style>
+
+</head>
+<body style="background-color:lightgoldenrodyellow">
+    
+          <div class="container-fluid">
+              <br />
+              <button type="button" class="btn btn-danger" id="logout" style="float:right">logout</button>
+              <div style="background-color:lightsalmon">
+                  <form class="row g-3">
+                      <div class="col-md-3">
+                          <label for="txtProductName" style="color:black" class="form-label">Product Name</label>
+                          <input type="text" class="form-control" id="txtProductName" required />
+                      </div>
+                      <div class="col-md-3">
+                          <label for="txtCategory" style="color:black" class="form-label">Category</label>
+                          <input type="text" class="form-control" id="txtCategory" required />
+                      </div>
+                      <div class="col-md-2">
+                          <label for="txtColor" style="color:black" class="form-label">Color</label>
+                          <input type="text" class="form-control" id="txtColor" required />
+                      </div>
+                      <div class="col-md-2">
+                          <label for="txtUnitPrice" style="color:black" class="form-label">Unit Price</label>
+                          <input type="text" class="form-control" id="txtUnitPrice" required />
+                      </div>
+                      <div class="col-md-2">
+                          <label for="txtAvailableQuantity" style="color:black" class="form-label">Available Quantity</label>
+                          <input type="text" class="form-control" id="txtAvailableQuantity" required />
+                      </div>
+
+                      <div class="col-12">
+                          <button type="button" class="btn btn-success" id="btnCreateProduct" onclick="createProduct()">Create</button>
+                          <button type="button" class="btn btn-warning" id="btnUpdateProduct" disabled>Update</button>
+
+                      </div>
+                      <br /><br />
+                  </form>
+              </div>
+              <br />
+              <br />
+              <table id="tblProductBody"  class="table table-bordered table-striped table-resposive">
+                  <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Name</th>
+                          <th>Category</th>
+                          <th>Color</th>
+                          <th>UnitPrice</th>
+                          <th>AvailableQuantity</th>
+                          <th>Edit Action</th>
+                          <th>Delete Action</th>
+                      </tr>
+                  </thead>
+                  <!--<tbody id="tblProductBody">
+        </tbody>-->
+              </table>
+          </div>
+
+</body>
+</html>
